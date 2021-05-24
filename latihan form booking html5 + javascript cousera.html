@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Falidasi Pengisian Form Booking</title>
+        <script type="application/javascript">
+        function checkdata(){
+            var namalengkap = document.getElementById("Nama Lengkap");
+            var alamat = document.getElementById("Alamat");
+            var notlp = document.getElementById("No telp");
+            var terapis = document.getElementById("Pilih Terapis");
+            var layanan = document.getElementById("Pilih Jenis Layanan");
+
+            if(namalengkap.value == ""){
+                alert("Isi dulu goblok");
+                namalengkap.focus();
+                return false;
+            }
+
+            if(alamat.value == ""){
+                alert("Isi dulu goblok");
+                alamat.focus();
+                return false;
+            }
+
+            if(notlp.value == ""){
+                alert("Isi dulu goblok");
+                notlp.focus();
+                return false;
+            }
+
+            if(terapis.value == ""){
+                alert("Isi dulu goblok");
+                terapis.focus();
+                return false;
+            }
+
+            if(layanan.value == ""){
+                alert("Isi dulu goblok");
+                layanan.focus();
+                return false;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <h2> Form Registrasi Booking Pijat </h2>
+        <form action="/register">
+            <label for="namalengkap"> Nama Lengkap </label>
+            <input type="text" id="namalengkap" name="namalengkap">
+            <br><br>
+            <label for="alamat"> Alamat </label>
+            <input type="text" id="alamat" name="alamat">
+            <br><br>
+            <label for="notlp"> No telp </label>
+            <input type="tel" id="notelp" name="notelp">
+            <br><br>
+            <label for="tanggal"> Tanggal dan Jam Booking </label>
+            <input type="datetime-local" id="tanggal">
+            <br><br>
+            <label for="terapis"> Pilih Terapis </label>
+            <input type="text" list="terapis">
+            <datalist id="terapis">
+                <option value="Rani"></option>
+                <option value="Putri"></option>
+                <option value="Santi"></option>
+            </datalist>
+            <br><br>
+            <label for="layanan"> Pilih Jenis Layanan </label>
+            <input type="text" list="layanan">
+            <datalist id="layanan">
+                <option value="Pijat Only"></option>
+                <option value="Pijat + Half Service"></option>
+                <option value="Pijat + Full Service"></option>
+            </datalist>
+            <input type="submit" value="Registrasi">
+        </form>
+    </body>
+</html>
